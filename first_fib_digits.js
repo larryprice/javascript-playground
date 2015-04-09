@@ -4,10 +4,14 @@ if (process.argv.length !== 3) {
 }
 
 var fib = function (n) {
-  if (n === 1 || n === 0) {
-    return n;
+  var sum = 1;
+  var prevSum = 1;
+  for (var i = 2; i < n; ++i) {
+    var tmp = sum;
+    sum = sum + prevSum;
+    prevSum = tmp;
   }
-  return fib(n - 2) + fib(n - 1);
+  return sum;
 }
 
 var digits = parseInt(process.argv[2]);
