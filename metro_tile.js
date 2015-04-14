@@ -18,8 +18,6 @@ var run = function () {
 				if (lines[i][j] !== ".") {
 					if (i === 0 || lines[i - 1][j] === ".") {
 						if (j === 0 || lines[i][j - 1] === ".") {
-							// console.log(lines[i][j], "starting letter");
-
 							// find rectangle
 							var cols = 1,
 								rows = 1;
